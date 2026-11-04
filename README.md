@@ -1,9 +1,11 @@
 <div align="center">
 
-# VeriAttend
-### Intelligent, Multi-Layer Campus Attendance System
+# CampusPramaan
+### Intelligent Campus Presence & Attendance Verification System
 
-**A Django-powered attendance platform designed to make classroom attendance more reliable through identity and classroom-presence verification.**
+**प्रमाणित उपस्थिति। सुरक्षित परिसर।**
+
+*A Django-powered campus platform that brings identity verification and classroom-presence checks together for more trustworthy attendance.*
 
 ![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-6.0-092E20?style=for-the-badge&logo=django&logoColor=white)
@@ -20,11 +22,11 @@
 
 Teachers can manage lecture attendance sessions, while students can view their scheduled classes and mark attendance when an active session is available. At the end of a session, the system can automatically record absent status for students assigned to that lecture who have not marked themselves present.
 
-> **Core idea:** Attendance should represent both the right student and the right classroom context—not just a button click.
+> **Our philosophy:** Attendance is not just about marking someone present. It is about establishing credible proof of presence.
 
-## Why VeriAttend?
+## Why CampusPramaan?
 
-Traditional attendance workflows can be time-consuming and vulnerable to proxy attendance. VeriAttend explores a layered approach:
+Traditional attendance workflows can be time-consuming and vulnerable to proxy attendance. CampusPramaan explores a layered approach to establish trustworthy campus presence:
 
 - **Identity check:** Face registration and face matching using `face_recognition`.
 - **Location check:** Compare a student's browser-provided coordinates with the configured classroom location and allowed radius.
@@ -185,7 +187,7 @@ This repository is an **academic / development prototype**, not a production-rea
 
 ## Current Scope & Future Improvements
 
-Potential next steps for taking VeriAttend further:
+Potential next steps for taking CampusPramaan further:
 
 - Enforce all verification factors in one server-side attendance validation service.
 - Bind face, location, and network verification to a unique attendance session.
@@ -212,7 +214,9 @@ No license has been included yet. Add a `LICENSE` file before distributing or re
 
 <div align="center">
 
-**VeriAttend — Verify the presence. Trust the record.**
+**CampusPramaan — प्रमाणित उपस्थिति। सुरक्षित परिसर।**
+
+*Where Campus Presence Meets Digital Trust.*
 
 Built with Django and Python.
 
