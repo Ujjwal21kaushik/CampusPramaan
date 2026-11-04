@@ -3,6 +3,7 @@
 <img src="static/css/images/banner.svg" alt="CampusPramaan banner" width="100%"/>
 
 <br/>
+<br/>
 
 ![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-6.0-092E20?style=for-the-badge&logo=django&logoColor=white)
@@ -170,6 +171,26 @@ The regular `dlib` package requires a local C++ toolchain and can fail during
 | http://127.0.0.1:8000/ | http://127.0.0.1:8000/admin/ |
 
 Use the admin panel to create users, groups, student/teacher profiles, lectures and classroom location.
+
+### Demo Credentials
+
+#### Students
+
+| Username | Password |
+|---|---|
+| `2415001699` | `ujjwal123` |
+| `2415001304` | `Ritika123` |
+| `2415001711` | `Utkarsh Singh Gaur123` |
+| `2415001801` | `Vishnu Sharma123` |
+
+#### Teachers
+
+| Username | Password |
+|---|---|
+| `TCH101` | `tch101` |
+| `TCH102` | `tch102` |
+| `TCH103` | `tch103` |
+| `TCH104` | `tch104` |
 
 ---
 
