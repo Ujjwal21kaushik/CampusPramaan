@@ -85,7 +85,7 @@ flowchart TB
 
 | Login | Student Dashboard |
 |:---:|:---:|
-| ![Login](login.png) | ![Student](assets/student_dashboard.png) |
+| ![Login](assets/login.png) | ![Student](assets/student_dashboard.png) |
 
 | Face Verification | Teacher Dashboard |
 |:---:|:---:|
