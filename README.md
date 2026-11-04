@@ -153,8 +153,17 @@ py -3.13 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-The face-recognition dependencies also require CMake and the Visual Studio
-Build Tools C++ workload on Windows.
+For Windows with Python 3.14, install the prebuilt face-recognition stack
+instead of compiling `dlib`:
+
+```powershell
+pip install dlib-bin==20.0.1.post1
+pip install --no-deps face-recognition-models==0.3.0 face-recognition==1.3.0
+pip install pillow numpy opencv-python click setuptools==70.3.0
+```
+
+The regular `dlib` package requires a local C++ toolchain and can fail during
+`pip install -r requirements.txt` on Windows.
 
 | App | Admin |
 |---|---|
