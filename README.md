@@ -85,11 +85,11 @@ flowchart TB
 
 | Login | Student Dashboard |
 |:---:|:---:|
-| ![Login](assets/screenshots/login.png) | ![Student](assets/screenshots/student_dashboard.png) |
+| ![Login](login.png) | ![Student](assets/student_dashboard.png) |
 
 | Face Verification | Teacher Dashboard |
 |:---:|:---:|
-| ![Face](assets/screenshots/face_verify.png) | ![Teacher](assets/screenshots/teacher_dashboard.png) |
+| ![Face](assets/face_verify.png) | ![Teacher](assets/teacher_dashboard.png) |
 
 ---
 
@@ -106,7 +106,7 @@ flowchart TB
 ## 📁 Project Structure
 
 ```text
-attendance_system/
+CampusPramaan/
 ├── accounts/        👤 profiles, login, dashboards
 ├── attendance/      📅 lectures, sessions, records, reports
 ├── face_auth/       🧑 face registration & verification
@@ -125,8 +125,8 @@ attendance_system/
 
 ```bash
 # 1. Clone
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd attendance_system
+git clone "https://github.com/Ujjwal21kaushik/CampusPramaan"
+cd CampusPramaan
 
 # 2. Virtual environment
 python -m venv .venv
@@ -143,6 +143,18 @@ python manage.py createsuperuser
 # 5. Run
 python manage.py runserver
 ```
+
+On Windows, if an existing virtual environment reports `No Python at ...`,
+remove it and recreate it with an installed Python version:
+
+```powershell
+Remove-Item -Recurse -Force .venv
+py -3.13 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+The face-recognition dependencies also require CMake and the Visual Studio
+Build Tools C++ workload on Windows.
 
 | App | Admin |
 |---|---|

@@ -73,7 +73,12 @@ body::after {
 }
 
 /* ================= NavBar ================= */
-nav{
+.campus-navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
   background: var(--white);
   border-bottom: 1px solid var(--border-color);
   position: sticky;
@@ -82,34 +87,105 @@ nav{
   box-shadow: var(--shadow);
   padding: 1rem 1.5rem;
 }
-.navbar-logo{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    text-decoration: none;
-    color: var(--text-dark);
-    font-size: 1.5rem;
-    font-weight: 700;
-    transition: transform 0.2s;
+
+.campus-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-dark);
+  transition: transform 0.2s ease;
 }
+
+.campus-brand:hover {
+  transform: translateY(-2px);
+}
+
+.logo-badge {
+  display: grid;
+  width: 2.8rem;
+  height: 2.8rem;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 0.9rem;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary-blue), #7c3aed);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+  transform: rotate(-6deg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campus-brand:hover .logo-badge {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.4);
+}
+
 .logo-icon {
-  width: 34px;
-  height: 34px;
-  color: var(--primary-blue);
+  width: 1.65rem;
+  height: 1.65rem;
   flex-shrink: 0;
 }
+
+.logo-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
 .logo-text {
-  font-size: 1.5rem;
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  line-height: 1;
   font-weight: 700;
   color: var(--text-dark);
+  letter-spacing: -0.02em;
+}
+
+.logo-text span {
+  color: var(--primary-blue);
+}
+
+.logo-copy small {
+  color: var(--text-gray);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.campus-logout {
+  margin-left: auto;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.6rem;
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+.campus-logout:hover,
+.campus-logout:focus-visible {
+  color: var(--primary-blue);
+  border-color: var(--primary-blue-light);
+  background: #eff6ff;
+}
+
+.campus-logout:focus-visible,
+.campus-brand:focus-visible {
+  outline: 3px solid rgba(59, 130, 246, 0.35);
+  outline-offset: 3px;
 }
 /* ================= End NavBar ================= */
 
 /* ================= Head ================= */
 .container{
     width: 100%;
-    height: fit-content;
-    padding: 0.2rem 1.5rem;
+    min-height: calc(100vh - 74px);
+    padding: 1.5rem;
     position: relative;
     z-index: 2;
 }
@@ -249,6 +325,31 @@ nav{
 }
 
 @media (max-width: 600px) {
+  .campus-navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .campus-logout {
+    padding: 0.5rem;
+  }
+
+  .campus-logout span {
+    display: none;
+  }
+
+  .logo-badge {
+    width: 2.45rem;
+    height: 2.45rem;
+  }
+
+  .logo-copy small {
+    display: none;
+  }
+
   .features {
     grid-template-columns: 1fr;
   }

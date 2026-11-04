@@ -1,10 +1,6 @@
-import face_recognition
-import numpy as np
 import pickle
 import base64
-import cv2
 import tempfile
-from PIL import UnidentifiedImageError
 
 def base64_to_image(base64_data):
     img_data = base64.b64decode(base64_data.split(",")[1])
@@ -16,6 +12,9 @@ def base64_to_image(base64_data):
 
 
 def get_face_encoding(image_path):
+    import face_recognition
+    from PIL import UnidentifiedImageError
+
     try:
         image = face_recognition.load_image_file(image_path)
         encodings = face_recognition.face_encodings(image)
@@ -43,10 +42,11 @@ def deserialize_encoding(binary):
 
 
 def verify_faces(stored_encoding, live_encoding, tolerance=0.5):
+    import face_recognition
+
     distance = face_recognition.face_distance(
         [stored_encoding],
         live_encoding
     )[0]
     return distance <= tolerance
-
 
